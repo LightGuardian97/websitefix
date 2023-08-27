@@ -1,0 +1,262 @@
+/* <!-- Fix for weird-looking preview and diff, doesn't affect CSS content --><source lang="css"> */
+
+/** Unreal Wiki Style **********************************************************
+ *
+ * Description: Adjustments to the style to give the site a bit more of a unique
+ * identity
+ */
+
+/* global background color */
+body {
+  background: #cfe7ff;
+}
+
+/* KHTMLFixes my ass! */
+div#column-content {
+  margin-left: -12.2em;
+}
+
+/* indent sidebar boxes a tiny bit */
+#p-navigation,
+#p-search,
+#p-tb {
+  margin-left: 0.4em;
+  width: 11.2em;
+}
+
+/* sidebar box background color */
+#p-navigation .pBody,
+#p-search     .pBody,
+#p-tb         .pBody {
+  background: #eff7ff;
+}
+
+/* content and page tab background color */
+#p-cactions li,
+#p-cactions li a {
+  background: #e0f0f7;
+}
+#content,
+table,
+#p-cactions li.selected,
+#p-cactions li.selected a,
+#p-cactions li a:hover {
+  background: #eff7ff;
+}
+
+/* Legacy namespace content */
+.ns-100 #content,
+.ns-101 #content,
+body[class*="page-Category_Legacy_"] #content,
+body[class*="page-Category_talk_Legacy_"] #content,
+body[class*="page-File_Legacy_"] #content,
+body[class*="page-File_talk_Legacy_"] #content {
+  background: #eff7ff url(/w/images/LegacyBackground.png) top right no-repeat;
+  border-color: #909;
+  border-width: 2px;
+}
+blockquote.legacyquote {
+  background-color: #cfe7ff;
+  border: 1px solid #909;
+  margin: 1em 25%;
+  padding: 0.5em 1em;
+}
+
+/* UE1 namespace content */
+.ns-102 #content,
+.ns-103 #content {
+  /*background: #eff7ff url(/w/images/UE1Background.png) top right no-repeat;*/
+  border-color: #880;
+  border-width: 2px;
+}
+
+/* UE2 namespace content */
+.ns-104 #content,
+.ns-105 #content {
+  /*background: #eff7ff url(/w/images/UE2Background.png) top right no-repeat;*/
+  border-color: #13b;
+  border-width: 2px;
+}
+
+/* UE3 namespace content */
+.ns-106 #content,
+.ns-107 #content {
+  /*background: #eff7ff url(/w/images/UE3Background.png) top right no-repeat;*/
+  border-color: #800;
+  border-width: 2px;
+}
+
+/* page tab border color */
+#p-cactions li {
+  border-color: #c0c0c0;
+}
+#p-cactions li.selected {
+  border-color: #aaa;
+}
+
+/* tab border hack for IE 6 and earlier */
+* html #p-cactions li {
+  border: none;
+  background-color: transparent;
+}
+* html #p-cactions li.selected {
+  border: none;
+  background-color: transparent;
+}
+* html #p-cactions li a {
+  border-color: #c0c0c0;
+}
+* html #p-cactions li.selected a {
+  border-color: #aaa;
+}
+
+/* tab border hack for IE 7 */
+*:first-child+html #p-cactions li {
+  border: none;
+  background-color: transparent;
+}
+*:first-child+html #p-cactions li a {
+  border-color: #c0c0c0;
+}
+*:first-child+html #p-cactions li.selected a {
+  border-color: #aaa;
+}
+
+/* personal links */
+#p-personal li a:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+/* heading and line color */
+h1, h2 {
+  border-bottom: #cde solid 1px;
+}
+h1 {
+  color:#508;
+}
+h2 {
+  color:#40a;
+}
+h3 {
+  color:#0a0;
+  border-bottom: #cec solid 1px;
+}
+h4 {
+  color:#04a;
+}
+hr {
+  color: #909;
+  background-color: #909;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#mw-subcategories h3,
+#mw-category-media h3,
+#mw-pages h3 {
+  color: black;
+  border-bottom: none;
+}
+
+#siteNotice {
+  float: right;
+  font-style: italic;
+  text-align: right;
+  max-width: 40%;
+}
+
+/** Advertisement placement ****************************************************
+ *
+ * Description: Positions the advertisement correctly, and adjusts the footer
+ * bar to fit in well with it.
+ */
+
+#f-copyrightico {
+  top: 0px;
+  margin: 10px 0px 19px 8px;
+}
+#f-poweredbyico {
+  top: -4px;
+  margin: 0px;
+}
+#f-poweredbyico, #f-copyrightico {
+  height: auto;
+}
+#footer {
+  background: #eee;
+  border-top-color: #aaa;
+  border-bottom-color: #aaa;
+  min-height: 55px;
+  padding: 4px 0pt 1px;
+}
+/* hacks for IE6 (and earlier) */
+* html #footer {
+  height: 55px;  /* replacement for lack of min-height (actually has same effect) */
+  border-left-color: #aaa; /* IE6 can't have full-width footer, so left border needs proper color */
+}
+#footer li {
+  white-space: nowrap;
+  margin: 0px 0.9em;
+}
+
+/** Tab size inconsistency fix *************************************************
+ *
+ * Description: Fix tab sizes for when font dimensions are different (Mac).
+ */
+
+#p-cactions li {
+  padding-bottom: 0.2em;
+}
+
+#p-cactions li.selected a {
+  padding-bottom: 0.3em !important;
+}
+
+.ns-100 #p-cactions li a,
+.ns-101 #p-cactions li a,
+.ns-102 #p-cactions li a,
+.ns-103 #p-cactions li a,
+.ns-104 #p-cactions li a,
+.ns-105 #p-cactions li a,
+.ns-106 #p-cactions li a,
+.ns-107 #p-cactions li a {
+  padding-bottom: 0.4em;
+}
+
+.ns-100 #p-cactions li.selected a,
+.ns-101 #p-cactions li.selected a,
+.ns-102 #p-cactions li.selected a,
+.ns-103 #p-cactions li.selected a,
+.ns-104 #p-cactions li.selected a,
+.ns-105 #p-cactions li.selected a,
+.ns-106 #p-cactions li.selected a,
+.ns-107 #p-cactions li.selected a {
+  padding-bottom: 0.4em !important;
+}
+
+/** Source code highlighter modifications **************************************
+ *
+ * Description: Adjustments to the source code highlighter to fit better with
+ * the rest of the site style.
+ */
+
+div.mw-geshi {
+  background-color:  #f9f9f9;
+  border:            1px dashed #2f6fab;
+  color:             black;
+  padding:           1em;
+}
+div.mw-geshi pre {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+  max-height: 50em;
+}
+.mw-geshi, .mw-geshi * {
+  line-height:       1.1em;
+}
+
+/* </source><!-- end of preview fix --> */
